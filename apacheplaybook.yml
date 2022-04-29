@@ -10,7 +10,7 @@
   - name: i want to update
     apt:
       name: apache2
-      state: update_cache
+      update_cache: yes
   - name: i want to restart the webserver
     service:
       name: apache2
