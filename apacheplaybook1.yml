@@ -1,0 +1,31 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: i want to insatll webserver on ubuntu
+    apt:
+      name: apache2
+      state: present
+    when: ansible_os_family =="Debian"
+
+  - name: i want to install webserver on redhat nodes
+    yum: 
+      name: httpd
+      state: present
+    when: ansible_os_family" =="RedHat"
+
+  - name: i want to restart ubuntu webserver
+    apt:
+     name: apache2
+     state: restarted
+    when: ansible_os_family =="Debian"
+
+  - name: i want to restart redhat wwebserver
+    yum:
+      name: httpd
+      state: restarted
+    when: ansible_os_family" =="RedHat"  
+    
+
+
+
