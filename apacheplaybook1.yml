@@ -20,6 +20,12 @@
       state: present
     when: ansible_os_family =="RedHat"
 
+  - name: start the service
+    service:
+       name: "{{webserveronRedHat}}"
+       state: started
+    when: ansible_os_family =="RedHat
+
   -  name: i want to update redhat webserver
      yum:
        name: "{{webserveronRedHat}}"
