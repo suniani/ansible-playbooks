@@ -7,12 +7,23 @@
       name: apache2
       state: present
     when: ansible_os_family =="Debian"
+  - name: i want update ubuntu webserver
+    apt:
+      name: apache2
+      update_cache: yes
+    when: ansible_os_family =="Debian"  
 
   - name: i want to install webserver on redhat nodes
     yum: 
       name: httpd
       state: present
     when: ansible_os_family =="RedHat"
+
+  -  name: i want to update redhat webserver
+     yum:
+       name: httpd
+       update_cache: yes
+     when: ansible_os_family =="RedHat"  
 
   - name: i want to restart ubuntu webserver
     service:
