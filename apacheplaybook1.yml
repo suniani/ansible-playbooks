@@ -4,36 +4,37 @@
   tasks:
   - name: i want to insatll webserver on ubuntu
     apt:
-      name: apache2
+      name: "{{webserveronubuntu}}"
       state: present
     when: ansible_os_family =="Debian"
+
   - name: i want update ubuntu webserver
     apt:
-      name: apache2
+      name: "{{webserveronubuntu}}"
       update_cache: yes
     when: ansible_os_family =="Debian"  
 
   - name: i want to install webserver on redhat nodes
     yum: 
-      name: httpd
+      name: "{{webserveronRedHat}}" 
       state: present
     when: ansible_os_family =="RedHat"
 
   -  name: i want to update redhat webserver
      yum:
-       name: httpd
+       name: "{{webserveronRedHat}}"
        update_cache: yes
      when: ansible_os_family =="RedHat"  
 
   - name: i want to restart ubuntu webserver
     service:
-     name: apache2
+     name: "{{webserveronubuntu}}"
      state: restarted
     when: ansible_os_family =="Debian"
 
   - name: i want to restart redhat wwebserver
     service:
-      name: httpd
+      name: "{{webserveronRedHat}}"
       state: restarted
     when: ansible_os_family =="RedHat"  
     
