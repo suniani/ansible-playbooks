@@ -12,6 +12,6 @@
 10.10.1.2
 10.10.2.4
 
-[webservers_vars]
+[webservers:vars]
 webserveronubuntu = apache2
 webserveronRedHat = httpd
