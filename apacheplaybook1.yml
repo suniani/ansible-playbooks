@@ -15,13 +15,13 @@
     when: ansible_os_family =="RedHat"
 
   - name: i want to restart ubuntu webserver
-    apt:
+    service:
      name: apache2
      state: restarted
     when: ansible_os_family =="Debian"
 
   - name: i want to restart redhat wwebserver
-    yum:
+    service:
       name: httpd
       state: restarted
     when: ansible_os_family =="RedHat"  
