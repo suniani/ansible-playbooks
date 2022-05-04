@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.32.34 
+  become: yes
+  vars:
+     package1: git
+     package: tree
+  tasks:
+  - name: i want to display the message
+    msg: "{{package}}"
+   
