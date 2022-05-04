@@ -5,6 +5,7 @@
      package1: git
      package: tree
   tasks:
-    name: i want to display the message
+  debug:
+  - name: i want to display the message
     msg: "{{package1}}"
    
