@@ -3,9 +3,12 @@
   become: yes
   vars:
      package1: git
-     package: tree
+     package2: tree
   tasks:
-  - name: i want to display the message
+  - name: i want to display the first task message
     debug:
       msg: "{{package1}}"
+  - name: i want to display the second task message
+    debug:
+      msg: "{{package2}}"
    
