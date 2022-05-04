@@ -1,0 +1,13 @@
+---
+- hosts: 172.31.32.34 
+  become: yes
+  vars:
+     package1: git
+     package2: tree
+  tasks:
+  - name: i want to display the first task message
+    debug:
+      msg: "{{package1}}"
+  - name: i want to display the second task message
+    debug:
+      msg: "{{package2}}"
