@@ -6,5 +6,5 @@
      package: tree
   tasks:
     name: i want to display the message
-    msg: "{{package}}"
+    msg: "{{package1}}"
    
