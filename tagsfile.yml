@@ -1,16 +1,18 @@
 ---
 - hosts: 172.31.32.34
   become: yes
-  tags: mygit
   tasks:
-  - name: i want to install git
-    apt: 
-      name: "{{gitpack}}"
-      state: present
-  - name: i want to install tree
-    apt: 
-      name: "{{treepack}}"
-      state: present
+  - name: git tasks
+    tags: mygit
+    block:
+    - name: i want to install git
+      apt: 
+        name: "{{gitpack}}"
+        state: present
+    - name: i want to install tree
+      apt: 
+        name: "{{treepack}}"
+        state: present
   - name: i want to install wget
     apt: 
       name: "{{wgetpack}}"
