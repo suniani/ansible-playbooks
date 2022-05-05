@@ -11,11 +11,10 @@
     apt: 
       name: "{{treepack}}"
       state: present
-  - hosts: 172.31.42.252
-    tags: mywget
   - name: i want to install wget
-    yum: 
+    apt: 
       name: "{{wgetpack}}"
       state: present
+      tags: mywget
     
   
