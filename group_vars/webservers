@@ -3,3 +3,6 @@ webserveronubuntu: apache2
 webserveronRedHat: httpd
 javapackageonubuntu: openjdk-8-jre
 javapackageonRedHat: java-1.8.0-openjdk
+gitpack: git
+treepack: tree
+wgetpack: wget
