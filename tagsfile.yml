@@ -2,7 +2,8 @@
 - hosts: 172.31.32.34
   become: yes
   tasks:
-  - tags: mygit
+  - name: git tasks
+    tags: mygit
     block:
     - name: i want to install git
       apt: 
