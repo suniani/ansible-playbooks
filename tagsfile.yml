@@ -1,22 +1,42 @@
 ---
-- hosts: 172.31.32.34
+- hosts: webservers
   become: yes
   tasks:
   - name: git tasks
     tags: mygit
     block:
-    - name: i want to install git
+    - name: i want to install git on ubuntu
       apt: 
         name: "{{gitpack}}"
         state: present
-    - name: i want to install tree
+      when: ansible_os_family =="Debian"
+    - name: i want to install git on RedHat
+      yum: 
+        name: "{{gitpack}}"
+        state: present
+      when: ansible_os_family =="RedHat"
+    - name: i want to install tree on ubuntu
       apt: 
         name: "{{treepack}}"
         state: present
-  - name: i want to install wget
-    apt: 
-      name: "{{wgetpack}}"
-      state: present
-    tags: mywget
+      when: ansible_os_family =="Debian"
+    - name: i want to install tree on RedHat
+      yum: 
+        name: "{{treepack}}"
+        state: present
+      when: ansible_os_family =="RedHat"
+  - tags: mywget
+    block:
+    - name: i want to install wget on ubuntu
+      apt: 
+        name: "{{wgetpack}}"
+        state: present
+      when: ansible_os_family =="Debian"
+    - name: i want to install wget on RedHat
+      yum: 
+        name: "{{wgetpack}}"
+        state: present
+      when: ansible_os_family =="RedHat"
+   
     
   
