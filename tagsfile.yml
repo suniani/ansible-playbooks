@@ -7,4 +7,14 @@
       name: "{{gitpack}}"
       state: present
     tags: mygit
+  - name: i want to install tree
+    apt: 
+      name: "{{treepack}}"
+      state: present
+    tags: mytree
+  - name: i want to install wget
+    apt: 
+      name: "{{wgetpack}}"
+      state: present
+    tags: mywget
   
