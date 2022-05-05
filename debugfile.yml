@@ -5,4 +5,8 @@
   - name: i want to execute direct command
     command: hostname -f
     register: myresult
+
+  - name: i want to display the result
+    debug:
+      msg: "{{myresult}}"
    
