@@ -5,13 +5,14 @@
   - name: i want to create a file
     file: 
       path: /home/sunitha/mytestfile
-      state: touch
-      mode: u=rw,g=r,o=r
+      owner: sunitha
+      #state: touch
+      mode: "u=rw,g=r,o=r"
   - name: i want to create a folder
     file: 
        path: /home/sunitha/mytestfolder
        state: directory
-       mode: u+rwx,g=r,o=r
+       mode: "u+rwx,g=r,o=r"
 
 
   
