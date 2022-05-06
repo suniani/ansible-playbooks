@@ -4,10 +4,10 @@
   tasks:
   - name: i want to create a file
     file: 
-      path: /home/sunitha/mytestfile
+      path: /home/sunitha/mytestfolder/file1
       owner: sunitha
       group: sunitha
-      #state: touch
+      state: touch
       mode: "u=rw,g=r,o=r"
   - name: i want to create a folder
     file: 
