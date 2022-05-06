@@ -10,6 +10,7 @@
     file: 
        path: /home/sunitha/mytestfolder
        state: directory
+       mode: u+rwx,g=r,o=r
 
 
   
