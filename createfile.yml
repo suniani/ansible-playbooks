@@ -16,6 +16,11 @@
        group: sunitha
        #state: directory
        mode: "u+rwx,g=r,o=r"
+  - name: i want to create a symbolic link
+    file:
+      src: /home/sunitha/mytestfolder/file1
+      dest: /home/sunitha/
+      state: link
 
 
   
