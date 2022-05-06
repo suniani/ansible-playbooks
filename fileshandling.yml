@@ -1,0 +1,12 @@
+---
+- hosts: 172.31.32.34
+  become: yes
+  tasks:
+  - name: i want to install webservers
+    apt:
+      name: "{{webserveronubuntu}}"
+      state: present
+  - name: i want to copy static files on node servers
+    copy:
+      src: staticfile.html
+      dest: /var/www/html/index.html
