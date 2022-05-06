@@ -7,20 +7,16 @@
       path: /home/sunitha/mytestfolder/file1
       owner: sunitha
       group: sunitha
-      state: touch
-      mode: "u=rw,g=r,o=r"
+      state: file
+      #mode: "u=rw,g=r,o=r"
   - name: i want to create a folder
     file: 
        path: /home/sunitha/mytestfolder
        owner: sunitha
        group: sunitha
-       #state: directory
+       state: directory
        mode: "u+rwx,g=r,o=r"
-  - name: i want to create a symbolic link
-    file:
-      src: /home/sunitha/mytestfolder/file1/to/link/to
-      dest: /home/sunitha/to/symlink
-      state: link
+  
 
 
   
