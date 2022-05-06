@@ -1,7 +1,14 @@
 ---
-- name: i want to create a file
-  file: 
-   path: /home/sunitha/mytestfile
-   state: touch
+- hosts: 172.31.32.34
+  tasks:
+  - name: i want to create a file
+    file: 
+      path: /home/sunitha/mytestfile
+      state: touch
+  - name: i want to create a folder
+    file: 
+       path: /home/sunitha/mytestfolder
+       state: directory
+
 
   
