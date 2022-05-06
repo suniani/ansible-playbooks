@@ -6,12 +6,15 @@
     file: 
       path: /home/sunitha/mytestfile
       owner: sunitha
+      group: sunitha
       #state: touch
       mode: "u=rw,g=r,o=r"
   - name: i want to create a folder
     file: 
        path: /home/sunitha/mytestfolder
-       state: directory
+       owner: sunitha
+       group: sunitha
+       #state: directory
        mode: "u+rwx,g=r,o=r"
 
 
