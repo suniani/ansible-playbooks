@@ -6,7 +6,7 @@
     file: 
       path: /home/sunitha/mytestfile
       state: touch
-      mode: u=rwx,g=r,o=r
+      mode: u=rw,g=r,o=r
   - name: i want to create a folder
     file: 
        path: /home/sunitha/mytestfolder
