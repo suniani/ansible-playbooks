@@ -1,0 +1,18 @@
+---
+- hosts: 172.31.32.34
+  become: yes
+  tasks:
+  - name: i want to create a file
+    file: 
+      path: /home/sunitha/mytestfolder/file1
+      owner: sunitha
+      group: sunitha
+      state: touch
+      mode: "u=rw,g=r,o=r"
+  - name: i want to create a folder
+    file: 
+       path: /home/sunitha/mytestfolder
+       owner: sunitha
+       group: sunitha
+       state: directory
+       mode: "u+rwx,g=r,o=r"
