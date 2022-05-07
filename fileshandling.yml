@@ -8,6 +8,6 @@
       name: "{{webserveronubuntu}}"
       state: present
   - name: i want to copy static files on node servers
-    copy:
-      src: staticfile.html
+    template:
+      src: index.j2
       dest: /var/www/html/index.html
