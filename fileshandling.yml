@@ -1,16 +1,28 @@
 ---
-- hosts: 172.31.32.34
+- hosts: webservers
   become: yes
   tasks:
   - include_tasks: createfile.yml
-  - name: i want to install webservers
+  - name: i want to install webserver on ubuntu
     apt:
       name: "{{webserveronubuntu}}"
       state: present
+    when: ansible_os_family =="Debian"
   - name: i want to copy static files on node servers
     template:
       src: index.j2
       dest: /var/www/html/index.html
+    when: ansible_os_family =="Debian"
+  - name: i want to install webserver on RedHat
+    yum:
+      name: "{{webserveronRedHat}}"
+      state: present
+    when: ansible_os_family =="RedHat"
+  - name: i want to copy static files on node servers
+    template:
+      src: indexRedhat.j2
+      dest: /var/www/html/index.html
+    when: ansible_os_family =="RedHat"
   - name: i want to download file from remote(internet) to node sides
     get_url:
         url: https://get.jenkins.io/war-stable/2.332.3/jenkins.war
