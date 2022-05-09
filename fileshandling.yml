@@ -7,14 +7,14 @@
     apt:
       name: "{{webserveronubuntu}}"
       state: present
-      notify: restartwebserver
+    notify: restartwebserver
     when: ansible_os_family =="Debian"
     
   - name: i want to copy static files on node servers
     template:
       src: index.j2
       dest: /var/www/html/index.html
-      notify: restartwebserver
+    notify: restartwebserver
     when: ansible_os_family =="Debian"
     
   - name: i want to download file from remote(internet) to node sides
