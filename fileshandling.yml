@@ -26,6 +26,6 @@
   handlers:
   - name: restartwebserver
     service:
-        name: "{{webserveronubuntu}}"
+        name: apache2
         state: restarted
 
