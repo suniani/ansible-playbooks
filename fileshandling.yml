@@ -22,6 +22,7 @@
         url: https://get.jenkins.io/war-stable/2.332.3/jenkins.war
         dest: /home/sunitha/
         force_basic_auth: yes
+  
   handlers:
   - name: restartwebserver
     service:
