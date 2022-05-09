@@ -9,6 +9,8 @@
       state: present
     when: ansible_os_family =="Debian"
     notify: restartwebserver
+  - name: Flush handlers
+    meta: flush_handlers
   - name: i want to copy static files on node servers
     template:
       src: index.j2
