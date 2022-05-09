@@ -23,9 +23,9 @@
         dest: /home/sunitha/
         force_basic_auth: yes
   
-  handlers:
-  - name: restartwebserver
-    service:
-      name: "{{webserveronubuntu}}"
-      state: restarted
+    handlers:
+    - name: restartwebserver
+      service:
+        name: "{{webserveronubuntu}}"
+        state: restarted
 
