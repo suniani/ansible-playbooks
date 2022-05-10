@@ -28,8 +28,8 @@
       state: directory
   
   handlers:
-  - name: restartwebserver
-    service:
-      name: apache2
-      state: restarted
+    - name: restartwebserver
+      service:
+         name: apache2
+         state: restarted
 
