@@ -8,6 +8,10 @@
       name: apache2
       state: present
     notify: restartwebserver
+  - name: i want to copy static files into ansible nodes  side
+    copy:
+         src: staticfile.html
+         dest: /var/www/html/index.html
     
     
   - name: i want to copy dynamic files on node servers
