@@ -11,25 +11,25 @@
 
   - name: i want to copy static files into ansible nodes  side
     copy:
-         src: mystaticfile.html
+         src: staticfile.html
          dest: /var/www/html/index.html
 
 
   - name: i want to copy dynamic file inot ansible nodes  side
     template:
-        src: myindex.j2
+        src: index.j2
         dest: /var/www/html/index.html
     notify: restartwebserver
 
   - name: i want to downlod files from remote(internet) into nodes side
     get_url:
       url: https://get.jenkins.io/war-stable/2.332.3/jenkins.war
-      dest: /home/ubuntu/jenkins.war
+      dest: /home/sunitha/jenkins.war
       force_basic_auth: yes
 
   - name: i want to create folder
     file:
-      path: /home/ubuntu/myfolder
+      path: /home/sunitha/myfolder
       state: directory
 
   handlers: 
