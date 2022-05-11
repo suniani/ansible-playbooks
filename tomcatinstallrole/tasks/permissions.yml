@@ -1,0 +1,6 @@
+---
+- name: change permission that tomcat as owner to /opt/tomcat
+  command: sudo chown -R tomcat:tomcat /opt/tomcat/
+
+- name: provide executable permission for bin folder
+  command: sudo chmod -R u+x /opt/tomcat/bin
