@@ -1,7 +1,7 @@
 ---
 - name: download tomcat 10
   get_url:
-    url: https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.22/bin/apache-tomcat-10.0.22.tar.gz
+    url: https://downloads.apache.org/tomcat/tomcat-10/v10.0.22/bin/apache-tomcat-10.0.22.tar.gz
     dest: /home/sunitha/apache-tomcat-10.0.22.tar.gz
     force_basic_auth: yes
 
