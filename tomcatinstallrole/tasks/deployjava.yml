@@ -1,6 +1,8 @@
 ---
 - name: deploy java application
   get_url:
-     url: https://maha29march22.s3.us-west-2.amazonaws.com/gameoflife.war
-     dest: /opt/tomcat/webapps/gameoflife.war
+     url: http://35.163.230.63:8082/artifactory/UATrepo/be/cegeka/gameoflife/0.0.1-SNAPSHOT/gameoflife-0.0.1-20220623.134858-1.war
+     dest: /opt/tomcat/webapps/gameoflife-0.0.1-20220623.134858-1.war
      force_basic_auth: yes
+     url_username: admin
+     url_password: Suniani2208@dhani26
