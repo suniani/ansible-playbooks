@@ -1,7 +1,7 @@
 ---
 - name: deploy java application
   get_url:
-     url: http://35.163.230.63:8082/artifactory/UATrepo/be/cegeka/gameoflife/0.0.1-SNAPSHOT/gameoflife-0.0.1-20220623.134858-1.war
+     url: http://18.237.25.223:8082/artifactory/UATrepo/be/cegeka/gameoflife/0.0.1-SNAPSHOT/gameoflife-0.0.1-20220623.134858-1.war
      dest: /opt/tomcat/webapps/gameoflife-0.0.1-20220623.134858-1.war
      force_basic_auth: yes
      url_username: admin
